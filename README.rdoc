@@ -1,0 +1,20 @@
+= Feature System
+
+* A "Feature" adds functionality to the Backstage core.
+* Features are added to backstage core in the following manor:
+- A gem / Rails Engine is created.
+- Within the module of the gem, a class should be defined called YourModuleNameFeatureDefinition.
+For example, if I were developing an Address book feature.  I would have an AddressBook module with an 
+AddressBookFeatureDefinition class within the module e.g AddressBook::AddressBookFeatureDefinition.
+- The feature gem that you are creating should have this gem, the "feature" gem as a dependency e.g AddressBook should have feature gem as a dependency.
+- The feature definition class should mixin the FeatureSystem::Provides module.  You would end up with a class similar to the following:
+
+module AddressBook
+ class AddressBookFeatureDefinition
+   include FeatureSystem::Provides
+ end
+end
+
+That is the minimum requirements for creating a feature.
+
+Check the documentation within Backstage for the "Feature Registration" process.
