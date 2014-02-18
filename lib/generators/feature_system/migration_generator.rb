@@ -15,6 +15,19 @@ module FeatureSystem
       def class_name
         file_name.camelize
       end
+
+      def direction
+        elements[0]
+      end
+
+      def feature
+        elements[1]
+      end
+
+      def elements
+        pieces = class_name.underscore.split('_')
+        [pieces.shift, pieces.join('_')]
+      end
     end
   end
 end

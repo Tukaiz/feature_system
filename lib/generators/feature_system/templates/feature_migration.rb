@@ -1,7 +1,5 @@
 class <%= class_name %> < FeatureSystem::Migration::Base
-  def up
-  end
-
-  def down
+  def change
+    <%= direction %> <%= ":#{feature}" %>
   end
 end
