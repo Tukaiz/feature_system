@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = FeatureSystem::VERSION
   s.authors     = ["Brett Lischalk"]
   s.email       = ["brett@brettlischalk.com"]
-  s.homepage    = "TODO"
+  s.homepage    = ""
   s.summary     = "Define core Feature functionality"
   s.description = "Define core Feature functionality"
 
